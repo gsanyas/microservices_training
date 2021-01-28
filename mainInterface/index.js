@@ -2,7 +2,7 @@ const express = require("express");
 const axios = require('axios');
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
 
     let result = await axios.get('http://localhost:8001/');
     res.send(result)});
